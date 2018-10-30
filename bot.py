@@ -31,7 +31,7 @@ info=s.get("https://edge.qiwi.com/payment-notifier/v1/hooks/active")
 print(json.loads(info.text))
 tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/test')
 print(json.loads(tst.text))
-s.delete('fa6d8174-b2fe-425f-b52d-16d035b1e4c0')
+s.delete('https://edge.qiwi.com/payment-notifier/v1/hooks/fa6d8174-b2fe-425f-b52d-16d035b1e4c0')
 
 def posts():
       post=s.post('http://echo.fjfalcon.ru/')
