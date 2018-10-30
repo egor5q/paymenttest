@@ -29,17 +29,17 @@ print(json.loads(h.text))
 #hook=s.put("https://edge.qiwi.com/payment-notifier/v1/hooks?hookType=1&param=http%3A%2F%2Fecho.fjfalcon.ru%2F&txnType=2")
 info=s.get("https://edge.qiwi.com/payment-notifier/v1/hooks/active")
 print(json.loads(info.text))
-tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/test')
+tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/15c545e6-9547-4192-a2dc-ad2ee77f53ee')
 print(json.loads(tst.text))
 #s.delete('https://edge.qiwi.com/payment-notifier/v1/hooks/fa6d8174-b2fe-425f-b52d-16d035b1e4c0')
 getkey=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/15c545e6-9547-4192-a2dc-ad2ee77f53ee/key')
 print(json.loads(getkey.text))
       
-#def posts():
-#      post=s.post('http://echo.fjfalcon.ru/')
-#      print(json.loads(post.text))
-#      t=threading.Timer(10,posts)
-#      t.start()
+def posts():
+      tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/')
+      print(json.loads(post.text))
+      t=threading.Timer(10,posts)
+      t.start()
 
 #if True:
 #   t=threading.Timer(1,posts)
