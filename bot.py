@@ -32,8 +32,16 @@ print(json.loads(info.text))
 tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/test')
 print(json.loads(tst.text))
 
+post=s.post()
 
+def posts():
+   while True:
+      post=s.post()
+      print(json.loads(post.text))
 
+if True:
+   t=threading.Timer(1,posts)
+   t.start()
 if True:
    print('7777')
    bot.polling(none_stop=True,timeout=600)
