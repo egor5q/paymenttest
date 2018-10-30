@@ -26,12 +26,12 @@ parameters={'rows':'10'}
 h=s.get('https://edge.qiwi.com/payment-history/v1/persons/'+str(mylogin)+'/payments', params = parameters) 
 print(json.loads(h.text))
 
-#hook=s.put("https://edge.qiwi.com/payment-notifier/v1/hooks?hookType=1&param=http%3A%2F%2Fecho.fjfalcon.ru%2F&txnType=2")
+hook=s.put("https://edge.qiwi.com/payment-notifier/v1/hooks?hookType=1&param=http%3A%2F%2Fecho.fjfalcon.ru%2F&txnType=2")
 info=s.get("https://edge.qiwi.com/payment-notifier/v1/hooks/active")
 print(json.loads(info.text))
 tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/test')
 print(json.loads(tst.text))
-s.delete('https://edge.qiwi.com/payment-notifier/v1/hooks/fa6d8174-b2fe-425f-b52d-16d035b1e4c0')
+#s.delete('https://edge.qiwi.com/payment-notifier/v1/hooks/fa6d8174-b2fe-425f-b52d-16d035b1e4c0')
 
 def posts():
       post=s.post('http://echo.fjfalcon.ru/')
