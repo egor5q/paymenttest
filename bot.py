@@ -29,6 +29,8 @@ print(json.loads(h.text))
 #hook=s.put("https://edge.qiwi.com/payment-notifier/v1/hooks?hookType=1&param=http%3A%2F%2Fecho.fjfalcon.ru%2F&txnType=0")
 info=s.get("https://edge.qiwi.com/payment-notifier/v1/hooks/active")
 print(json.loads(info.text))
+tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/test')
+print(json.loads(tst.text))
 
 
 
