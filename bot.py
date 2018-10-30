@@ -23,7 +23,7 @@ mylogin=79268508530
 s=requests.Session()
 s.headers['authorization']='Bearer '+bearer
 parameters={'rows':'10'}
-h=s.get('https://edge.qiwi.com/payment-history/v1/persons/'+mylogin+'/payments', params = parameters) 
+h=s.get('https://edge.qiwi.com/payment-history/v1/persons/'+str(mylogin)+'/payments', params = parameters) 
 print(json.loads(h.text))
 
 
