@@ -34,7 +34,7 @@ print(json.loads(tst.text))
 #s.delete('https://edge.qiwi.com/payment-notifier/v1/hooks/fa6d8174-b2fe-425f-b52d-16d035b1e4c0')
       
 def posts():
-      getkey=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/15c545e6-9547-4192-a2dc-ad2ee77f53ee/payment')
+      getkey=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/15c545e6-9547-4192-a2dc-ad2ee77f53ee/')
       print(json.loads(getkey.text))
       t=threading.Timer(10,posts)
       t.start()
