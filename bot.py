@@ -32,11 +32,10 @@ print(json.loads(info.text))
 tst=s.get('https://edge.qiwi.com/payment-notifier/v1/hooks/test')
 print(json.loads(tst.text))
 
-post=s.post()
 
 def posts():
    while True:
-      post=s.post()
+      post=s.post('http://echo.fjfalcon.ru/')
       print(json.loads(post.text))
 
 if True:
