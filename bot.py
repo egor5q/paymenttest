@@ -34,7 +34,7 @@ print(json.loads(tst.text))
 #s.delete('https://edge.qiwi.com/payment-notifier/v1/hooks/fa6d8174-b2fe-425f-b52d-16d035b1e4c0')
 
 def posts():
-      post=s.post('http://echo.fjfalcon.ru/')
+      post=s.post('http%3A%2F%2Fecho.fjfalcon.ru')
       print(json.loads(post.text))
       t=threading.Timer(10,posts)
       t.start()
