@@ -26,6 +26,10 @@ parameters={'rows':'10'}
 h=s.get('https://edge.qiwi.com/payment-history/v1/persons/'+str(mylogin)+'/payments', params = parameters) 
 print(json.loads(h.text))
 
+hook=s.put("https://edge.qiwi.com/payment-notifier/v1/hooks?hookType=1&param=http%3A%2F%2Fecho.fjfalcon.ru%2F&txnType=0")
+info=s.get("https://edge.qiwi.com/payment-notifier/v1/hooks/active")
+print(json.loads(info.text))
+
 
 
 if True:
