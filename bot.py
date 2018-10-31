@@ -50,6 +50,10 @@ def foo(bar):
     
 api.start()
 
+def cancelpay():
+    api.stop()
+    reload()
+
 def reload():
     api=QApi(token=bearer,phone=mylogin)
     price=1
@@ -58,6 +62,10 @@ def reload():
     print(comment)
     print('Переведите '+str(price)+' рублей на счёт +'+str(mylogin)+' с комментарием '+comment)
     api.start()
+    t=threading.Timer(300,cancelpay)
+    t.start()
+    
+    
     
     
 
