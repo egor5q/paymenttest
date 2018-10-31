@@ -35,7 +35,6 @@ print(json.loads(tst.text))
 
 api=QApi(token=bearer,phone=mylogin)
 price=1
-comment=api.bill(price)
 api.bill(price)+='gg'
 comment=api.bill(price)
 print(comment)
