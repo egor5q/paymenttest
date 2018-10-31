@@ -56,7 +56,7 @@ def reload():
     name='myaf'
     comment=api.bill(comment=name+' test', price=price)
     print(comment)
-    print('Переведите '+str(price)+' рублей на счёт '+str(mylogin)+' с комментарием '+comment)
+    print('Переведите '+str(price)+' рублей на счёт +'+str(mylogin)+' с комментарием '+comment)
     api.start()
     
     
