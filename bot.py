@@ -35,19 +35,25 @@ print(json.loads(tst.text))
 
 api=QApi(token=bearer,phone=mylogin)
 price=1
-comment='piska'#api.bill(price)
+comment='testcomment'#api.bill(price)
 print(comment)
 print('Переведите '+str(price)+' рублей на счёт '+str(mylogin)+' с комментарием '+comment)
-api.start()
 
-while True:
-      if api.check(comment):
-            print('Платеж получен!')
-            bot.send_message(441399484,'Платеж получен! Сумма: '+str(price)+' рублей.')
-            break        
-      time.sleep(1)
+@api.bind_echo()
+def foo(bar):
+    bot.send_message(441399484,'New payment!')
+    print(bar)
+    
+
+
+#while True:
+#      if api.check(comment):
+#            print('Платеж получен!')
+#            bot.send_message(441399484,'Платеж получен! Сумма: '+str(price)+' рублей.')
+#            break        
+#      time.sleep(1)
       
-api.stop()
+#api.stop()
 
 
 
