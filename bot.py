@@ -44,7 +44,7 @@ def foo(bar):
     bot.send_message(441399484,'New payment!')
     print(bar)
     
-
+api.start()
 
 #while True:
 #      if api.check(comment):
