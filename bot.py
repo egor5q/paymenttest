@@ -12,7 +12,7 @@ from pymongo import MongoClient
 from emoji import emojize
 import requests
 import json
-
+from SimpleQIWI import *
 
 token = os.environ['TELEGRAM_TOKEN']
 bot = telebot.TeleBot(token)
