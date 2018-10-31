@@ -35,8 +35,8 @@ print(json.loads(tst.text))
 
 api=QApi(token=bearer,phone=mylogin)
 price=1
-api.bill(price)+='gg'
-comment=api.bill(price)
+name='myaf'
+comment=api.bill(comment=name+' test')
 print(comment)
 print('Переведите '+str(price)+' рублей на счёт '+str(mylogin)+' с комментарием '+comment)
 
