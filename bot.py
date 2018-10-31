@@ -44,20 +44,21 @@ print('Переведите '+str(price)+' рублей на счёт '+str(mylo
 def foo(bar):
     bot.send_message(441399484,'New payment!')
     print(bar)
+    api.stop()
+    reload()
+    
     
 api.start()
 
 def reload():
-    try:
-      api.stop()
-    except:
-      pass
+    api=QApi(token=bearer,phone=mylogin)
+    price=1
+    name='myaf'
+    comment=api.bill(comment=name+' test', price=price)
+    print(comment)
+    print('Переведите '+str(price)+' рублей на счёт '+str(mylogin)+' с комментарием '+comment)
     api.start()
-    t=threading.Timer(120,reload)
-    t.start()
     
-t=threading.Timer(120,reload)
-t.start()
     
 
 #while True:
