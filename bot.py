@@ -38,6 +38,7 @@ price=1
 comment=api.bill(price)
 print(comment)
 print('Переведите '+str(price)+' рублей на счёт '+str(mylogin)+' с комментарием '+comment)
+api.start()
 
 while True:
       if api.check(comment):
@@ -45,6 +46,8 @@ while True:
             bot.send_message(441399484,'Платеж получен! Сумма: '+str(price)+' рублей.')
             break        
       time.sleep(1)
+      
+api.stop()
 
 
 
