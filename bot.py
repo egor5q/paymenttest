@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+except
 import os
 import telebot
 import time
