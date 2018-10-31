@@ -46,14 +46,16 @@ def foo(bar):
     print(bar)
     
 api.start()
-t=threading.Timer(120,reload)
-t.start()
 
 def reload():
     api.stop()
     api.start()
     t=threading.Timer(120,reload)
     t.start()
+    
+t=threading.Timer(120,reload)
+t.start()
+    
 
 #while True:
 #      if api.check(comment):
